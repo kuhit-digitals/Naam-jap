@@ -1,24 +1,23 @@
-﻿script.js:
-let count = 0;
-document.getElementById("jap-btn").addEventListener("click", function() {
-    count++;
-    document.getElementById("count").innerText = count;
-    document.getElementById("jap-text").innerHTML += "??? ";
-    if (count % 108 === 0) {
-        document.getElementById("jap-text").innerHTML += "<br>";
-    }
+﻿document.addEventListener("DOMContentLoaded", function() {
+    let chantCount = 0;
+    const chantButton = document.getElementById("chantButton");
+    const chantDisplay = document.getElementById("chantCount");
+    const playChant = document.getElementById("playChant");
+    const chantText = document.getElementById("chantText");
+
+    chantButton.addEventListener("click", function() {
+        chantCount++;
+        chantDisplay.textContent = chantCount;
+    });
+
+    playChant.addEventListener("click", function() {
+        const chant = chantText.value.trim();
+        if (chant) {
+            const utterance = new SpeechSynthesisUtterance(chant);
+            speechSynthesis.speak(utterance);
+        } else {
+            alert("Please enter a chant first.");
+        }
+    });
 });
-
-document.getElementById("play-pause").addEventListener("click", function() {
-    let audio = document.getElementById("chant-audio");
-    if (audio.paused) {
-        audio.play();
-        this.innerText = "Stop Chant";
-    } else {
-        audio.pause();
-        this.innerText = "Play Chant";
-    }
-});
-
-
 

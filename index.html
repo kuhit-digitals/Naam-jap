@@ -1,35 +1,21 @@
-﻿index.html:
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naam Jap</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <div class="container">
-        <img src="logo.png" alt="Naam Jap Logo" width="150">
-
-
+        <img src="logo.png" alt="Naam Jap Logo" class="logo">
         <h1>नाम जप</h1>
-
-        <div class="jap-container">
-            <p id="jap-text"></p>
-        </div>
-        <button id="jap-btn">Click to Chant</button>
-        <p>Total Chants: <span id="count">0</span></p>
-        <button id="play-pause">Play Chant</button>
+        <button id="chantButton">Click to Chant</button>
+        <p>Total Chants: <span id="chantCount">0</span></p>
+        <button id="playChant">Play Chant</button>
+        <textarea id="chantText" placeholder="Type your chant here..."></textarea>
     </div>
-    <footer>
-        <p>Made with ❤ by Harshit</p>
-    </footer>
+    <footer>Made with ♥ by Harshit</footer>
     <script src="script.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js');
-        }
-    </script>
 </body>
 </html>
