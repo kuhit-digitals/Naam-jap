@@ -1,4 +1,4 @@
-script.js:
+﻿script.js:
 let count = 0;
 document.getElementById("jap-btn").addEventListener("click", function() {
     count++;

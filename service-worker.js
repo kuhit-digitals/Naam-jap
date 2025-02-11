@@ -1,4 +1,4 @@
-service-worker.js:
+﻿service-worker.js:
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open('naam-jap-cache-v1').then(cache => {

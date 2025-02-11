@@ -1,0 +1,17 @@
+﻿manifest.json:
+{
+    "name": "Naam Jap",
+    "short_name": "NaamJap",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#f4a261",
+    "icons": [
+        {
+            "src": "images/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
+
